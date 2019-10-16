@@ -1,5 +1,7 @@
-<doctype! html>
+<DOCTYPE! html>
 <head>
+  console.log("run 1");
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="jquery-3.4.1.min.js"></script>
   <title>Images</title>
   <script>
@@ -9,15 +11,17 @@
       this.smallImage = smallImage;
       this.largeImage = this.largeImage;
     }
+    var image1 = Image("No 1 (Royal Red and Blue)", "$75.1 million", "https://www.whudat.de/images/top20_most_expansive_paintings_01.jpg", "");
+    document.getElementById("image1").src = image1.smallImage;
   </script>
 </head>
 <body>
   <div class="largeImage"></div>
   <div class="smallImages">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
-    <img src="">
+    <img src="" id="image1">
+    <img src="" id="image2">
+    <img src="" id="image3">
+    <img src="" id="image4">
+    <img src="" id="image5">
   </div>
 </body>
