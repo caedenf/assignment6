@@ -16,15 +16,16 @@
     <img src="" id="image5" class="smallImage">
   </div>
   <script>
-    console.log("run 7");
+    console.log("run 8");
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
       this.price = price;
       this.smallImage = smallImage;
       this.largeImage = this.largeImage;
     }
-    function changeImage(imageURL) {
-      document.getElementById("bigImage").src = imageURL;
+    function changeImage(input) {
+      console.log(input);
+      //document.getElementById("bigImage").src = imageURL;
     }
     var imagesArray = []; //add images to array!
     var image1 = new Image("No 1 (Royal Red and Blue)", "$75.1 million", "https://1uyxqn3lzdsa2ytyzj1asxmmmpt-wpengine.netdna-ssl.com/wp-content/uploads/2012/09/Mark-Rothko-No-1-Untitled-Royal-Red-and-Blue-1954-large-1040263612-87x150.jpg", "http://www.artmarketmonitor.com/wp-content/uploads/2012/09/Mark-Rothko-No-1-Untitled-Royal-Red-and-Blue-1954-large-1040263612.jpg");
@@ -43,7 +44,8 @@
     imagesArray.push(image4);
     imagesArray.push(image5);
     $(document).ready(function(){
-      $(".smallImage").hover(changeImage(imagesArray[this.id.slice(-1)-1].largeImage));
+      $(".smallImage").hover(changeImage(this));
+      //$(".smallImage").hover(changeImage(imagesArray[this.id.slice(-1)-1].largeImage));
     }); 
     
   </script>
