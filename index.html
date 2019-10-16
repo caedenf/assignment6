@@ -5,21 +5,26 @@
   <title>Images</title>
 </head>
 <body>
-  <div class="largeImage"></div>
+  <div class="largeImage">
+    <img src="" id="bigImage">
+  </div>
   <div class="smallImages">
-    <img src="" id="image1">
-    <img src="" id="image2">
-    <img src="" id="image3">
-    <img src="" id="image4">
-    <img src="" id="image5">
+    <img src="" id="image1" class="smallImage">
+    <img src="" id="image2" class="smallImage">
+    <img src="" id="image3" class="smallImage">
+    <img src="" id="image4" class="smallImage">
+    <img src="" id="image5" class="smallImage">
   </div>
   <script>
-    console.log("run 4");
+    console.log("run 6");
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
       this.price = price;
       this.smallImage = smallImage;
       this.largeImage = this.largeImage;
+    }
+    function changeImage(imageURL) {
+      document.getElementById("bigImage").src = imageURL;
     }
     var imagesArray = []; //add images to array!
     var image1 = new Image("No 1 (Royal Red and Blue)", "$75.1 million", "https://1uyxqn3lzdsa2ytyzj1asxmmmpt-wpengine.netdna-ssl.com/wp-content/uploads/2012/09/Mark-Rothko-No-1-Untitled-Royal-Red-and-Blue-1954-large-1040263612-87x150.jpg", "http://www.artmarketmonitor.com/wp-content/uploads/2012/09/Mark-Rothko-No-1-Untitled-Royal-Red-and-Blue-1954-large-1040263612.jpg");
@@ -32,5 +37,11 @@
     document.getElementById("image4").src = image4.smallImage;
     var image5 = new Image("No. 5", "$140 million", "http://www.all4man.co.uk/pictures/Culture/th/t1_jackson_pollock_1_no_5_1948_1.jpg", "http://static5.businessinsider.com/image/4d711dba4bd7c86779020000-1200/1-jackson-pollock-no-5-1948.jpg");
     document.getElementById("image5").src = image5.smallImage;
+    imagesArray.push(image1);
+    imagesArray.push(image2);
+    imagesArray.push(image3);
+    imagesArray.push(image4);
+    imagesArray.push(image5);
+    $smallImage.hover(changeImage(imagesArray[this.id.slice(-1)-1].largeImage));
   </script>
 </body>
