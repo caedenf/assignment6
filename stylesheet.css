@@ -12,8 +12,8 @@ div.largeImage {
 
 div.infoPane {
     position: absolute;   
-    width: 300px;
-    height: 70px;
+    width: 350px;
+    height: 60px;
     background-color: #FFFFFF;
     text-align: center;
     white-space: pre-line;
