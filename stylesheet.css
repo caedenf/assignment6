@@ -8,12 +8,12 @@ div.container {
 
 div.largeImage {
     position: absolute;
-    display:inline-block;
+    left: 300px;
 }
 
 div.infoPane {
-    position: absolute;  
-    display:inline-block;
+    position: absolute; 
+    left: 300px;
     width: 350px;
     height: 60px;
     background-color: #FFFFFF;
