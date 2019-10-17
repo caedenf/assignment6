@@ -2,8 +2,12 @@ div.smallImages {
     white-space: nowrap;
 }
 
-div.largeImage {
+div.container {
     position: relative;
+}
+
+div.largeImage {
+    position: absolute;
 }
 
 div.infoPane {
