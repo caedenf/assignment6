@@ -1,3 +1,7 @@
 div.smallImages {
     white-space: nowrap;
 }
+
+div.largeImage {
+    position: relative;
+}
