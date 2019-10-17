@@ -6,6 +6,9 @@ div.largeImage {
     position: relative;
 }
 
-#infoPane {
+div.infoPane {
     position: absolute;   
+    width = 300px;
+    height = 200px;
+    background = #FFFFFF;
 }
