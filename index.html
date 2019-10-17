@@ -26,7 +26,7 @@
     </center>
   </div>
   <script>
-    console.log("run 40");
+    console.log("run 41");
     $("#infoPane").hide();
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
@@ -48,17 +48,18 @@
         $("#infoPane").hide();
       }, 5000);
     }
+    function displayThumbnails() {
+      for (var i = 1; i < 6; i++) {
+        var image = "image" + i;
+        document.getElementById(image).src = imagesArray[i-1].smallImage;
+      }
+    }
     var imagesArray = [];
     var image1 = new Image("No 1 (Royal Red and Blue)", "$75.1 million", "https://1uyxqn3lzdsa2ytyzj1asxmmmpt-wpengine.netdna-ssl.com/wp-content/uploads/2012/09/Mark-Rothko-No-1-Untitled-Royal-Red-and-Blue-1954-large-1040263612-87x150.jpg", "http://www.artmarketmonitor.com/wp-content/uploads/2012/09/Mark-Rothko-No-1-Untitled-Royal-Red-and-Blue-1954-large-1040263612.jpg");
-    document.getElementById("image1").src = image1.smallImage;
     var image2 = new Image("False Start", "$80 million", "https://graphics8.nytimes.com/images/blogs/dealbook/johns_falsestart190.jpg", "https://i.pinimg.com/736x/e5/cf/e5/e5cfe56cfd96eca13c330ddfd6d11e64.jpg");
-    document.getElementById("image2").src = image2.smallImage;
     var image3 = new Image("Portrait of Dr. Gachet", "$82.5 million", "https://rlv.zcache.com/svc/view?realview=113366176147967900&design=2e372354-c405-41e3-b73b-c98b7744c750&rlvnet=1&type=standard_postcard&max_dim=180&hide=bleed%2Csafe%2Cvisible%2CvisibleMask", "http://www.vggallery.com/painting/f_0753.jpg");
-    document.getElementById("image3").src = image3.smallImage;
     var image4 = new Image("Portrait of Adele Bloch-Bauer II", "$87.9 million", "https://sep.yimg.com/ay/artsheaven/portrait-of-adele-bloch-bauer-ii-18.jpg", "https://cdn.antiquestradegazette.com/media/9492/klimt-bloch-bauer-2279ne-10-02-17.jpg");
-    document.getElementById("image4").src = image4.smallImage;
     var image5 = new Image("No. 5", "$140 million", "http://www.all4man.co.uk/pictures/Culture/th/t1_jackson_pollock_1_no_5_1948_1.jpg", "http://static5.businessinsider.com/image/4d711dba4bd7c86779020000-1200/1-jackson-pollock-no-5-1948.jpg");
-    document.getElementById("image5").src = image5.smallImage;
     imagesArray.push(image1);
     imagesArray.push(image2);
     imagesArray.push(image3);
