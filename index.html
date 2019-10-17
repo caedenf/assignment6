@@ -26,7 +26,7 @@
     </center>
   </div>
   <script>
-    console.log("run 41");
+    console.log("run 42");
     $("#infoPane").hide();
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
@@ -51,8 +51,6 @@
     function displayThumbnails() {
       for (var i = 1; i < 6; i++) {
         var image = "image" + i;
-        console.log(image);
-        console.log(imagesArray[i-1].smallImage);
         document.getElementById(image).src = imagesArray[i-1].smallImage;
       }
     }
@@ -67,6 +65,7 @@
     imagesArray.push(image3);
     imagesArray.push(image4);
     imagesArray.push(image5);
+    displayThumbnails();
     $(document).ready(function(){
       $('.smallImage').mouseover(function() {
         changeImage(this.id);
