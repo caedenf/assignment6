@@ -18,18 +18,27 @@
   </div>
   </center>
   <script>
-    console.log("run 11");
+    console.log("run 12");
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
       this.price = price;
       this.smallImage = smallImage;
       this.largeImage = largeImage;
     }
-    function changeImage(input) {
-      var imageURL = imagesArray[parseInt(input.slice(-1))-1].largeImage;
+    function changeImage(name) {
+      var imageURL = imagesArray[parseInt(name.slice(-1))-1].largeImage;
       document.getElementById("bigImage").src = imageURL;
     }
-    var imagesArray = []; //add images to array!
+    function displayInfo(name) {
+      var obj = imagesArray[parseInt(name.slice(-1))-1];
+      var infoPane = document.createElement("div");
+      infoPane.style.width = "300px";
+      infoPane.style.height = "200px";
+      infoPane.style.background = #000000;
+      infoPane.innerHTML = "Title: " + obj.name + "\nPrice: " + obj.price;
+      document.getElementById("main").appendChild(infoPane);
+    }
+    var imagesArray = [];
     var image1 = new Image("No 1 (Royal Red and Blue)", "$75.1 million", "https://1uyxqn3lzdsa2ytyzj1asxmmmpt-wpengine.netdna-ssl.com/wp-content/uploads/2012/09/Mark-Rothko-No-1-Untitled-Royal-Red-and-Blue-1954-large-1040263612-87x150.jpg", "http://www.artmarketmonitor.com/wp-content/uploads/2012/09/Mark-Rothko-No-1-Untitled-Royal-Red-and-Blue-1954-large-1040263612.jpg");
     document.getElementById("image1").src = image1.smallImage;
     var image2 = new Image("False Start", "$80 million", "https://graphics8.nytimes.com/images/blogs/dealbook/johns_falsestart190.jpg", "https://i.pinimg.com/736x/e5/cf/e5/e5cfe56cfd96eca13c330ddfd6d11e64.jpg");
@@ -50,7 +59,7 @@
         changeImage(this.id);
       });
       $('.smallImage').click(function() {
-        console.log(this.id);
+        displayInfo(this.id);
       });
     }); 
     
