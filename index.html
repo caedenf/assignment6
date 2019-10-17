@@ -5,6 +5,7 @@
   <title>Images</title>
 </head>
 <body>
+  <center>
   <div class="smallImages">
     <img src="" id="image1" class="smallImage">
     <img src="" id="image2" class="smallImage">
@@ -15,8 +16,9 @@
   <div class="largeImage">
     <img src="" id="bigImage">
   </div>
+  </center>
   <script>
-    console.log("run 10");
+    console.log("run 11");
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
       this.price = price;
@@ -46,6 +48,9 @@
     $(document).ready(function(){
       $('.smallImage').mouseover(function() {
         changeImage(this.id);
+      });
+      $('.smallImage').click(function() {
+        console.log(this.id);
       });
     }); 
     
