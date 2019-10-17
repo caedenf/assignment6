@@ -18,7 +18,7 @@
   </div>
   </center>
   <script>
-    console.log("run 23");
+    console.log("run 24");
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
       this.price = price;
@@ -37,8 +37,8 @@
       infoPane.style.width = "300px";
       infoPane.style.height = "200px";
       infoPane.style.background = "#FFFFFF";
-      infoPane.style.position = "absolute";
-      infoPane.innerHTML = "Title: " + obj.name + "\nPrice: " + obj.price;
+      infoPane.id = "infoPane";
+      infoPane.innerHTML = "Title: " + obj.name + "\n" + "Price: " + obj.price;
       document.getElementById("largeImage").appendChild(infoPane);
     }
     var imagesArray = [];
