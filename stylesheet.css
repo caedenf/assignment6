@@ -17,4 +17,5 @@ div.infoPane {
     background-color: #FFFFFF;
     padding: 10px;
     text-align: center;
+    white-space: pre-line;
 }
