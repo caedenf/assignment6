@@ -18,7 +18,7 @@
   </div>
   </center>
   <script>
-    console.log("run 21");
+    console.log("run 22");
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
       this.price = price;
@@ -36,7 +36,10 @@
       var infoPane = document.createElement("div");
       infoPane.style.width = "300px";
       infoPane.style.height = "200px";
-      infoPane.style.background = "#000000";
+      infoPane.style.background = "#FFFFFF";
+      infoPane.style.position: "absolute";
+      infoPane.style.marginTop: "400px";
+      infoPane.style.marginLeft: "400px";
       infoPane.innerHTML = "Title: " + obj.name + "\nPrice: " + obj.price;
       document.body.appendChild(infoPane);
     }
