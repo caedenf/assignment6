@@ -27,11 +27,7 @@
     }
     function changeImage(name) {
       var imageURL = imagesArray[parseInt(name.slice(-1))-1].largeImage;
-      console.log("in changeimage");
-      $(".bigImage").fadeOut(500, function() {
-            console.log("in fade");
-            document.getElementById("bigImage").src = imageURL;
-        }).fadeIn(500);
+      document.getElementById("bigImage").src = imageURL;
     }
     function displayInfo(name) {
       var obj = imagesArray[parseInt(name.slice(-1))-1];
