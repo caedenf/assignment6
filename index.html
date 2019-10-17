@@ -29,7 +29,7 @@
       var imageURL = imagesArray[parseInt(name.slice(-1))-1].largeImage;
       $(".bigImage").fadeOut();
       document.getElementById("bigImage").src = imageURL;
-      $(".bigImage").fadeIn();
+      $(".bigImage").fadeIn(500);
     }
     function displayInfo(name) {
       var obj = imagesArray[parseInt(name.slice(-1))-1];
