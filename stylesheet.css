@@ -5,3 +5,7 @@ div.smallImages {
 div.largeImage {
     position: relative;
 }
+
+#infoPane {
+    position: absolute;   
+}
