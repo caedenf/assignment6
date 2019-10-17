@@ -19,12 +19,12 @@
     <div class="largeImage" id="largeImage">
       <img src="" id="bigImage">
     </div>
-    <div class="infoPane" id="infoPane">
+    <div class="infoPane" id="infoPane" style="background-color:#FFFFFF margin:10px">
     </div>
   </div>
   </center>
   <script>
-    console.log("run 27");
+    console.log("run 28");
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
       this.price = price;
@@ -42,7 +42,7 @@
       document.getElementById("infoPane").innerHTML = "Title: " + obj.name + "&#013;&#010;" + "Price: " + obj.price;
       setTimeout(function() {
         console.log("hiding");
-        $("#bigImage").hide();
+        $("#infoPane").hide();
       }, 5000);
     }
     var imagesArray = [];
