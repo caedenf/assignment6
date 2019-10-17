@@ -51,6 +51,8 @@
     function displayThumbnails() {
       for (var i = 1; i < 6; i++) {
         var image = "image" + i;
+        console.log(image);
+        console.log(imagesArray[i-1].smallImage);
         document.getElementById(image).src = imagesArray[i-1].smallImage;
       }
     }
