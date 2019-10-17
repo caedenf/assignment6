@@ -18,7 +18,7 @@
   </div>
   </center>
   <script>
-    console.log("run 12");
+    console.log("run 13");
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
       this.price = price;
@@ -27,7 +27,9 @@
     }
     function changeImage(name) {
       var imageURL = imagesArray[parseInt(name.slice(-1))-1].largeImage;
-      document.getElementById("bigImage").src = imageURL;
+      $(".bigImage").fadeTo(1000,0.30, function() {
+         document.getElementById("bigImage").src = imageURL;
+      }).fadeTo(500,1);
     }
     function displayInfo(name) {
       var obj = imagesArray[parseInt(name.slice(-1))-1];
