@@ -40,7 +40,7 @@
     }
     function displayInfo(name) {
       var obj = imagesArray[parseInt(name.slice(-1))-1];
-      document.getElementById("infoPane").innerHTML = "Title: " obj.name + "\n" + "Price: " + obj.price;
+      document.getElementById("infoPane").innerHTML = "Title: " + obj.name + "\n" + "Price: " + obj.price;
       $("#infoPane").show();
       setTimeout(function() {
         $("#infoPane").hide();
