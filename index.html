@@ -24,7 +24,7 @@
   </div>
   </center>
   <script>
-    console.log("run 26");
+    console.log("run 27");
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
       this.price = price;
@@ -40,6 +40,10 @@
     function displayInfo(name) {
       var obj = imagesArray[parseInt(name.slice(-1))-1];
       document.getElementById("infoPane").innerHTML = "Title: " + obj.name + "&#013;&#010;" + "Price: " + obj.price;
+      setTimeout(function() {
+        console.log("hiding");
+        $("#bigImage").hide();
+      }, 5000);
     }
     var imagesArray = [];
     var image1 = new Image("No 1 (Royal Red and Blue)", "$75.1 million", "https://1uyxqn3lzdsa2ytyzj1asxmmmpt-wpengine.netdna-ssl.com/wp-content/uploads/2012/09/Mark-Rothko-No-1-Untitled-Royal-Red-and-Blue-1954-large-1040263612-87x150.jpg", "http://www.artmarketmonitor.com/wp-content/uploads/2012/09/Mark-Rothko-No-1-Untitled-Royal-Red-and-Blue-1954-large-1040263612.jpg");
