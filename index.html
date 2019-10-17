@@ -2,7 +2,7 @@
 <head>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="jquery-3.4.1.min.js"></script>
-  <title>Images</title>
+  <title>Gallery</title>
 </head>
 <body>
   <center>
@@ -26,7 +26,7 @@
     </center>
   </div>
   <script>
-    console.log("run 37");
+    console.log("run 38");
     $("#infoPane").hide();
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
@@ -36,9 +36,9 @@
     }
     function changeImage(name) {
       var imageURL = imagesArray[parseInt(name.slice(-1))-1].largeImage;
-      $(".bigImage").fadeOut();
+      $(".largeImage").fadeOut();
       document.getElementById("bigImage").src = imageURL;
-      $(".bigImage").fadeIn(500);
+      $(".largeImage").fadeIn(500);
     }
     function displayInfo(name) {
       var obj = imagesArray[parseInt(name.slice(-1))-1];
