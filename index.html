@@ -24,7 +24,8 @@
   </div>
   </center>
   <script>
-    console.log("run 31");
+    console.log("run 32");
+    document.getElementById("infoPane").hide();
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
       this.price = price;
@@ -40,8 +41,8 @@
     function displayInfo(name) {
       var obj = imagesArray[parseInt(name.slice(-1))-1];
       document.getElementById("infoPane").innerHTML = "Title: " + "\n" + "Price: " + obj.price;
+      document.getElementById("infoPane").show();
       setTimeout(function() {
-        console.log("hiding");
         $("#infoPane").hide();
       }, 5000);
     }
