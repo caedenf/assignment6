@@ -36,7 +36,7 @@
     }
     function changeImage(name) {
       var imageURL = imagesArray[parseInt(name.slice(-1))-1].largeImage;
-      $(".largeImage").fadeOut();
+      //$(".largeImage").fadeOut();
       document.getElementById("bigImage").src = imageURL;
       $(".largeImage").fadeIn(500);
     }
