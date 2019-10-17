@@ -16,7 +16,7 @@
     <img src="" id="image5" class="smallImage">
   </div>
   <script>
-    console.log("run 8");
+    console.log("run 9");
     function Image(name, price, smallImage, largeImage) {
       this.name = name;
       this.price = price;
@@ -44,8 +44,9 @@
     imagesArray.push(image4);
     imagesArray.push(image5);
     $(document).ready(function(){
-      $(".smallImage").hover(changeImage(this));
-      //$(".smallImage").hover(changeImage(imagesArray[this.id.slice(-1)-1].largeImage));
+      $('.smallImage').mouseover(function() {
+        changeImage(this.id);
+      });
     }); 
     
   </script>
